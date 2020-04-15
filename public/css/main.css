@@ -144,5 +144,154 @@ a {
 }
 
 .catalog {
-  height: 1000px;
+  background-color: #f2f2f2;
+}
+
+.catalog-menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 0 20px;
+  margin: 0;
+}
+
+.catalog-menu-item {
+  margin: 0 20px;
+}
+
+.catalog-menu-item a {
+  font-size: 1.3em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #e4bb23;
+  padding: 25px 0;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+}
+
+.catalog-menu-item a:hover {
+  box-shadow: inset 0 -1px 0 #e4bb23;
+}
+
+.catalog-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-flow: row;
+  row-gap: 30px;
+  column-gap: 15px;
+  padding: 20px 0;
+}
+
+@media (max-width: 960px) {
+  .catalog-list {
+    padding: 20px;
+  }
+}
+
+.catalog-list-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.movie-poster {
+  margin: 0;
+  position: relative;
+}
+
+.movie-poster img {
+  width: 100%;
+}
+
+.movie-poster-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+}
+
+.catalog-list-item:hover .movie-poster-info {
+  visibility: visible;
+  opacity: 1;
+}
+
+.movie-poster-info h2 {
+  font-size: 2em;
+  color: #e4bb23;
+  text-transform: uppercase;
+}
+
+.movie-poster-info a {
+  color: #fff;
+  font-size: 5em;
+  transition: all 0.2s ease-in-out;
+}
+
+.movie-poster-info a:hover {
+  cursor: pointer;
+  color: #e4bb23;
+}
+
+.movie-info {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-info h2 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 1.3em;
+}
+
+.movie-info-genres {
+  display: flex;
+  margin-top: 10px;
+}
+
+.movie-info-genres a {
+  font-size: 1.2em;
+  color: #e4bb23;
+  margin-right: 5px;
+}
+
+.movie-info-genres a:not(:last-child):after {
+  content: ',';
+}
+
+.movie-info a:hover {
+  text-decoration: underline;
+}
+
+.movie-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px 10px;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.movie-footer i {
+  color: #ccc;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.movie-footer i:hover {
+  color: #e74c3c;
 }
