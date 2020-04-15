@@ -295,3 +295,44 @@ a {
 .movie-footer i:hover {
   color: #e74c3c;
 }
+
+.footer {
+  padding: 20px;
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.social-links {
+  display: flex;
+}
+
+.social-links li {
+  margin-left: 20px;
+}
+
+.social-links li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.social-links li a {
+  font-size: 2.5em;
+  color: #bababa;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-links a:hover .fa-twitter {
+  color: #55acee;
+}
+
+.social-links a:hover .fa-facebook-official {
+  color: #3b5998;
+}
+
+.social-links a:hover .fa-instagram {
+  color: #e95950;
+}
